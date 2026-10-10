@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n = 4, i, p[4] = {1, 2, 3, 4};
+    int pr[4] = {3, 1, 4, 2}, max = 0;
+
+    for (i = 1; i < n; i++) {
+        if (pr[i] < pr[max])
+            max = i;
+    }
+
+    printf("Selected Process: P%d\n", p[max]);
+    printf("Highest Priority: %d\n", pr[max]);
+
+    return 0;
+}
